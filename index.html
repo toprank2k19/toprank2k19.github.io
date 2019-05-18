@@ -1,290 +1,234 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="en">
 <style>
-    html{  line-height: 2; text-align: center;}
-body{ padding:0; margin:0; position:relative;}
-
-body::after{ content:''; display:block; height:100px; }
+*{margin:0;padding:0;}
+html,body {
+font-family:Helvetica, sans-serif;
+background-color:rgb(44, 47, 51);
+line-height:1.5;
+font-size: 0.93em;
+}
+header {
+font-size:1.7em;
+color:rgb(209, 209, 209);
+padding-top:20px;
+margin:auto auto 30px auto;
+}
+#navcontainer {
+width:100%;
+}
+.p {
+    text-align: center;
+}
+#navbar {
+height:100%;
+min-width:200px;
+position:fixed;
+left:20px;
+align-content:left;
+text-align:left;
+border-right:3px solid gray;
+}
+#navbar li{
+  list-style: none;
+}
+.nav-link {
+text-decoration:none;
+list-style:none;
+line-height:2;
+color:white;
+cursor:pointer;
+}
+.nav-link:hover {
+color:rgb(146, 146, 146);
+}
+#main-doc {
+text-align:center;
+}
+p {
+color:rgb(226, 226, 226);
+text-align:center;
+margin-right:;
+}
+a {
+    transition: 0.8s ease;
+    text-decoration: none;
+    color: rgb(197, 197, 197);
+}
+a:hover {
+    color: rgb(255, 255, 255);
+}
 
 footer{ 
-  position:absolute; 
-  bottom:0; 
-  width:100%; 
-  height:100px; 
+    text-align:center;
 }
-#intro {
-    background-color:#337ab7;
-    color:rgb(245, 245, 245);
-    margin-bottom:100px;
+.code {
+display:block;
+background-color:rgb(44,47,59);
+padding:15px 15px 15px 40px;
+margin-right:40px;
+border-radius:5px;
+color:rgb(211, 211, 211);
+line-height:1.65;
+width:30%;
+margin: 0 auto;
 }
-.jumbotron {
-        text-align: center;
-    }
-
-#footer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    width: 100%;
-    height: 100px;
-    box-shadow: 0px 2px 5px 1px rgba(48,48,57,0.4);
+hr {
+width:60%;
+display:block;
+margin:30px auto 30px auto;
+opacity:0.5;
+border-radius:50%;
 }
-
-img {
-    height: 22px;
-    width: 22px;
+h2 {
+text-align:center;
+color:rgb(207, 207, 207);
 }
 
-.btn-mg {
-    margin-bottom: 10px; 
+ul {
+    text-align: left;
 }
-
-.btn-mgi {
-    margin-bottom: 0px;
-}
-
-.hr {
-    opacity:1;
-    width:85%;
-    margin-top:10px;
-    margin-bottom:40px;
-    
-}
-
-.h1 {
-    opacity:1;
-    width:85%;
-}
-
-.lhe {
-    line-height: 2.1;
-}
-
 .lh1 {
     line-height: 1.5;
 }
+#trankt {
+    display:none;
+}
+.hline {
+    display:none;
+}
 
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 0px;
+/*media query 750px or less*/
+@media (max-width:750px), (orientation: portrait) { 
+html {padding:0;margin:0 auto;}
+
+#trankt {
+    display: block;
+    color: rgb(226, 226, 226);
+    margin: 30px auto;
+    text-align:center;
+}
+
+.hline {
+width:60%;
+display:block;
+margin:30px auto 30px auto;
+opacity:0.5;
+border-radius:50%;
+}
+
+#navbar {
+  display: none;
+}
+#main-doc {
+  width: 100%;
+  text-align: center;
+
+}
+
+#navcontainer {
+  display: none;
+}
+
+.code {
+  width: 60%;
+  margin: 0 auto;
+}
+#main-doc header {
+  margin-left:1.5%;
   }
-
-.tt-grid-ct {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 0px;
 }
-
-.margin {
-    margin-top: 140px;
-}
-
-
-
-
-.btn-md {
-    margin-top: 10px;
-    border-radius: 20%;
-    box-shadow: 1.5px 1.5px 3px 0px rgb(0, 0, 0);
-}
-
-#bdcont {
-    margin-left:20vh;
-    margin-right:20vh;
-}
-
 </style>
-
-     <!--bootstrap-->
-     <link rel="stylesheet" href="css.css"/>
-    
-<head>
-       <!--responsiveness and compatibility-->
-       <meta charset="utf-8">
-       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <title>TOP RANK 2k19</title>
-</head>
-
 <body>
-        <section class="jumbotron" id="intro">
-                <div class="container">
-                    <h1>TOP RANK 2019</h1>
-                 <br>
-                    <h2>Statistics Repo</h2>
-               </div>
-        </section>
-<div id="bdcont">
-        <section id="teamrosters">
-        <h4>
-              Team Rosters
-        </h4>
-        <hr class="hr">
-        <div class="grid-container">
-                <div>
-                    <h4 class="btn-mg">Team 1</h4>
-                    <div class="lhe">
-                    <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                    </div>
-                </div>
-               <div>
-                   <h4 class="btn-mg">Team 2</h4>
-                   
-                   <div class="lhe">
-                          <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                          </div>
-              </div>
-               <div>
-                   <h4 class="btn-mg">Team 3</h4>
-                
-                   <div class="lhe">
-                          <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                   </div>
-               </div>
-               <div>
-                   <h4 class="btn-mg">Team 4</h4>
-                  
-                   <div class="lhe">
-                          <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                          </div>
-              </div>  
-    </div>
- </section>
- 
- <hr class="h1" style="margin-top:50px;">
 
- <div class="margin"></div>
- 
- <section id="individualstats"> 
-     
-   <h4>Individual Statistics</h4>    
-   <hr class="hr">
-   <div class="grid-container">
-           <div>
-               <h4 class="btn-mg">Team 1</h4>
-           
-               <div class="lhe">
-               <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-               </div>
-           </div>
-          <div>
-              <h4 class="btn-mg">Team 2</h4>
-            
-              <div class="lhe">
-                     <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                     </div>
-         </div>
-          <div>
-              <h4 class="btn-mg">Team 3</h4>
-            
-              <div class="lhe">
-                     <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-              </div>
-          </div>
-          <div>
-              <h4 class="btn-mg">Team 4</h4>
-             
-              <div class="lhe">
-                     <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                     </div>
-         </div>  
+<div id="trankt">
+    <h1>TOP RANK 2019</h1>
 </div>
- </section>
- 
- <hr class="h1" style="margin-top:50px;">
-
- <div class="margin"></div>
-          
-         <section id="gameboxscores">
-              <h4>
-                  Game Box Scores
-              </h4>
-              <hr class="hr">
-              <div class="container1">
-              <div class="grid-container">
-                              <div>
-                                  <h4 class="btn-mg">May 20:</h4>
-                                
-                                  <div class="lhe">
-                                  <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 1</a>
-                                  </div>
-                                  <div class="lhe">
-                                  <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 2</a>
-                                  </div>
-                              </div>
-                             <div>
-                                 <h4 class="btn-mg">May 21:</h4>
-                               
-                                 <div class="lhe">
-                                        <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 1</a>
-                                        </div>
-                                        <div class="lhe">
-                                        <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 2</a>
-                                 </div>
-                            </div>
-                             <div>
-                                 <h4 class="btn-mg">May 22:</h4>
-                              
-                                 <div class="lhe">
-                                        <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 1</a>
-                                        </div>
-                                        <div class="lhe">
-                                        <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 2</a>
-                                 </div>
-                             </div>
-                             <div>
-                                 <h4 class="btn-mg">May 23:</h4>
-                              
-                                 <div class="lhe">
-                                        <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">Game 1 (Final)</a>
-                                        </div>
-                            </div>  
-                  </div>
-              </div>
-          </section>
-          
-          <hr class="h1" style="margin-top:50px;">
-
-          <div class="margin"></div>
-          <section id="toptools">
-              <h4>Top Tools Results</h4>
-              <hr class="hr">
-              <div class="tt-grid-cont">
-                    <div>
-                        <h4 class="btn-mgi">Event 1</h4>
-                       
-                        <div class="lhe">
-                        <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                        </div>
-                    </div>
-                   <div><br>
-                       <h4 class="btn-mgi">Event 2</h4>
-                       
-                       <div class="lhe">
-                              <a style="border-radius:25%;" href="" class="btn btn-primary btn-md" role="button" href="" target="_blank">View</a>
-                              </div>
-                  </div> 
-        </div>
-          </section>
-
-          <hr class="h1" style="margin-top:50px;">
+<div class="hline">
+    <hr>
 </div>
-<div class="margin"></div>
-        <!--jquery-->
-        <script src="jquery.js"></script>
-        <!--js/-->
-        <script src="bs.js"></script>
-</body>
 
+<div id="navcontainer">
+<nav id="navbar">
+<header>TOP RANK 2019</header>
+<ul>
+ <li><a class="nav-link" href="#bundt_cake" rel="internal">Team Rosters</a></li>
+ <li><a class="nav-link" href="#fat_sandwich" rel="internal">Individual Statistics</a></li>
+ <li><a class="nav-link" href="#snap_soup" rel="internal">Game Box Scores</a></li>
+ <li><a class="nav-link" href="#mouth_watering" rel="internal">Top Tools Results</a></li>
+</ul>
+</nav>
+</div>
+<main id="main-doc">
+    <section class="main-section" id="bundt_cake">
+     <header>Team Rosters:</header>
+            <ul class="code">
+              <a href="" target="_blank"><li>CJBA</li></a>
+              <a href="" target="_blank"><li>Diamond's Prospect</li></a>
+              <a href="" target="_blank"><li>Go Pro Baseball</li></a>
+              <a href="" target="_blank"><li>Prospectos Elite</li></a>
+            </ul><br>
+   </section>
+       <hr>
+  <section class="main-section" id="fat_sandwich">
+    <header>Individual Statistics</header>
+    <ul class="code">
+        <a href="" target="_blank"><li>CJBA</li></a>
+        <a href="" target="_blank"><li>Diamond's Prospect</li></a>
+        <a href="" target="_blank"><li>Go Pro Baseball</li></a>
+        <a href="" target="_blank"><li>Prospectos Elite</li></a>
+      </ul><br>
+  </section>
+      <hr>
+  <section id="snap_soup">
+    <header>Game Box Scores</header>
+       <p class="p">
+         May 20:
+       </p><br>
+       <ul class="code">
+        <a href="" target="_blank"><li>Game 1</li></a>
+        <a href="" target="_blank"><li>Game 2</li></a>
+        </ul><br>
+        <p class="p">
+            May 21:
+          </p><br>
+          <ul class="code">
+           <a href="" target="_blank"><li>Game 1</li></a>
+           <a href="" target="_blank"><li>Game 2</li></a>
+           </ul><br>
+           <p class="p">
+            May 22:
+          </p><br>
+          <ul class="code">
+           <a href="" target="_blank"><li>Game 1</li></a>
+           <a href="" target="_blank"><li>Game 2</li></a>
+           </ul><br>
+           <p class="p">
+            May 23:
+          </p><br>
+          <ul class="code">
+           <a href="" target="_blank"><li>Final Game</li></a>
+           </ul><br>
+  </section>
+       <hr>
+  <section id="mouth_watering">
+   <header>Top Tools Results</header>
+   <ul class="code">
+    <a href="" target="_blank"><li>60 Yards Run</li></a>
+    <a href="" target="_blank"><li>ARM Shuffle</li></a>
+    <a href="" target="_blank"><li>MPH Speed</li></a>
+  </ul><br>
+  </section>
+<hr>
+</main>
 <footer id="footer">
-    <p>Contact & Support:</p>
+    <div style="color:white;">Contact & Support:</div><br>
     <div class="lh1">
-    <div class="ib"><img src="ws.png"> +1 (253) 392 3956</div>
+    <div style="color:white;"> +1 (253) 392 3956 (WhatsApp Only)</div>
 
-    <div class="ib"><img src="ws.png"> +58 412 102 3592</div>
+    <div style="color:white; margin-bottom:25px;"> +58 412 102 3592 (Phone & WhatsApp)</div>
     </div>
 </footer>
+
+</footer>
+</body>
 </html>
